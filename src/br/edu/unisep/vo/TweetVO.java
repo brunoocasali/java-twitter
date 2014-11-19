@@ -56,14 +56,3 @@ public class TweetVO {
 		this.text = text;
 	}
 }
-
-// CREATE DATABASE twitter_on_java;
-//
-// \c twitter_on_java;
-//
-// CREATE TABLE tweets(
-// tweet_id BIGINT DEFAULT 0 NOT NULL PRIMARY KEY,
-// screen_name VARCHAR(20) DEFAULT 'Person Name!' NOT NULL,
-// user_id BIGINT DEFAULT 0 NOT NULL,
-// text_tweet VARCHAR(140) DEFAULT 'Tweeet Teeextt!' NOT NULL
-// );
