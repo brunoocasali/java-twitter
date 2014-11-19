@@ -1,9 +1,7 @@
-package br.edu.unisep.vo;
+package br.edu.unisep.model.vo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,15 +12,18 @@ public class TweetVO {
 	@Id
 	@Column(name = "tweet_id")
 	private Long tweetId;
-	
+
 	@Column(name = "user_id")
 	private Long userId;
-	
+
 	@Column(name = "screen_name")
 	private String screenName;
-	
+
 	@Column(name = "text_tweet")
 	private String text;
+
+	@Column(name = "user_image")
+	private String image;
 
 	public Long getTweetId() {
 		return tweetId;
@@ -54,5 +55,13 @@ public class TweetVO {
 
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 }

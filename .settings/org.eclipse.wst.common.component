@@ -3,7 +3,10 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="hibernate_generic.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hibernate_generic/hibernate_generic">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/TwitterOnJava/build/classes"/>
-        <property name="context-root" value="TwitterJava"/>
+        <property name="context-root" value="twitter"/>
     </wb-module>
 </project-modules>

@@ -21,7 +21,7 @@
 		<property name="hibernate.format_sql">true</property>
 
 		<!-- Mapped Classes -->
-		<mapping class="br.edu.unisep.vo.TweetVO" />
+		<mapping class="br.edu.unisep.model.vo.TweetVO" />
 
 	</session-factory>
 

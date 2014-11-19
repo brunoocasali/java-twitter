@@ -1,4 +1,4 @@
-package br.edu.unisep.models;
+package br.edu.unisep.model.dao;
 
 import java.util.List;
 

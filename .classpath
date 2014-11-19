@@ -23,9 +23,29 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/hibernate_generic"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HIBERNATE"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSTL"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/POSTGRESQL"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HIBERNATE">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.jsf;#system#"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.jsf;#system#"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSTL">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.jsf;#system#"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/POSTGRESQL">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.jsf;#system#"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
