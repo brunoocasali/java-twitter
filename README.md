@@ -12,14 +12,15 @@ This app will be used to write an article to university.
 
 3° `postgres=# \c twitter_on_java;` enter on the database!
 
-4° create the table for tweets:
+4° Create the table for tweets:
 
 ```
 CREATE TABLE tweets(
 	tweet_id BIGINT DEFAULT 0 NOT NULL PRIMARY KEY,
 	screen_name VARCHAR(20) DEFAULT 'Person Name!' NOT NULL,
 	user_id BIGINT DEFAULT 0 NOT NULL,
-	text_tweet VARCHAR(140) DEFAULT 'Tweeet Teeextt!' NOT NULL
+	text_tweet VARCHAR(140) DEFAULT 'Tweeet Teeextt!' NOT NULL,
+	user_image VARCHAR(200) DEFAULT 'http://c.dryicons.com/images/icon_sets/symbolize_icons_set/png/64x64/user.png'
 );
 ```
 
