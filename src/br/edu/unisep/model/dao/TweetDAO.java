@@ -29,12 +29,14 @@ public class TweetDAO {
 		}
 	}
 
+	// This method transform objects from Status (object in API) to another but
+	// in this time serializable in the database
 	public void persistTweets(String q) throws Exception {
 		try {
 
 			List<Status> tweets = getTweets(q);
 			DAOGenerico<TweetVO> dao = new DAOGenerico<TweetVO>();
-			
+
 			TweetVO vo = null;
 			for (Status tweet : tweets) {
 				vo = new TweetVO();
@@ -43,7 +45,7 @@ public class TweetDAO {
 				vo.setTweetId(tweet.getId());
 				vo.setUserId(tweet.getUser().getId());
 				vo.setImage(tweet.getUser().getProfileImageURL());
-				
+
 				dao.salvar(vo);
 			}
 		} catch (Exception e) {

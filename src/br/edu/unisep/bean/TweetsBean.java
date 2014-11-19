@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-
 import br.edu.unisep.hibernate.DAOGenerico;
 import br.edu.unisep.model.dao.TweetDAO;
 import br.edu.unisep.model.vo.TweetVO;
@@ -17,25 +16,23 @@ public class TweetsBean {
 
 	@PostConstruct
 	public void list() {
-		// Retornar apenas os dados salvos na tabela
+		// Return only the data that lives in database
 		DAOGenerico<TweetVO> dao = new DAOGenerico<TweetVO>();
 		tweets = dao.listar(TweetVO.class);
 	}
-	
+
 	public String search() {
-		
-		// Salvar os primeiros 20 resultados da busca do Twitter no banco
-		TweetDAO tDao = new TweetDAO();
 		try {
-			tDao.persistTweets(query);
+			// Persist all of the new tweets.
+			TweetDAO dao = new TweetDAO();
+			dao.persistTweets(query);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return "index";
 	}
-	
+
+	// Acessor methods
 	public List<TweetVO> getTweets() {
 		return tweets;
 	}

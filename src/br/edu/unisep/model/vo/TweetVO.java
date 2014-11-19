@@ -1,5 +1,7 @@
 package br.edu.unisep.model.vo;
 
+// Import's try: CTRL + SHIF + O
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "tweets")
 public class TweetVO {
 
+	// Attributes from business model.
 	@Id
 	@Column(name = "tweet_id")
 	private Long tweetId;
@@ -24,6 +27,9 @@ public class TweetVO {
 
 	@Column(name = "user_image")
 	private String image;
+
+	// Accessor methods. 
+	// Try: CTRL + 3 > then write 'gga' > ENTER > Select All > OK
 
 	public Long getTweetId() {
 		return tweetId;
