@@ -10,17 +10,10 @@ public class HibernateSessionFactory {
 	
 private static SessionFactory sessionFactory;
 	
-	/*
-	 * Código definido no bloco de inicialização estatico será executado
-	 * apenas uma única vez, na primeira utilização da classe DespesaDAO
-	 */
 	static {
 		
 		Configuration config = new Configuration();
-		/*
-		 * Carrega as configurações definidade no arquivo hibernate.cfg.xml,
-		 * aplicando-as ao objeto configuration
-		 */
+		
 		config.configure();
 		
 		StandardServiceRegistryBuilder srb = new StandardServiceRegistryBuilder();
@@ -28,19 +21,10 @@ private static SessionFactory sessionFactory;
 		
 		StandardServiceRegistry reg = srb.build();
 		
-		/*
-		 * Cria o objeto SessionFActory, que será responsavel por gerar objetos
-		 * Session, que serão utilizados para comunicação com o banco de dados.
-		 */
 		sessionFactory = config.buildSessionFactory(reg);	
 	}
 	
-	/*
-	 * Método responsável por retornar uma sessão de comunicação
-	 * com o banco de dados 
-	 */
 	public static Session getSession(){
 		return sessionFactory.openSession();
 	}
-
 }
