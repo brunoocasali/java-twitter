@@ -19,6 +19,7 @@ CREATE TABLE tweets(
 	tweet_id BIGINT DEFAULT 0 NOT NULL PRIMARY KEY,
 	screen_name VARCHAR(20) DEFAULT 'Person Name!' NOT NULL,
 	user_id BIGINT DEFAULT 0 NOT NULL,
+	created_at TIMESTAMP DEFAULT NOW(),
 	text_tweet VARCHAR(140) DEFAULT 'Tweeet Teeextt!' NOT NULL,
 	user_image VARCHAR(200) DEFAULT 'http://c.dryicons.com/images/icon_sets/symbolize_icons_set/png/64x64/user.png'
 );

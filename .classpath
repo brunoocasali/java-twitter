@@ -22,7 +22,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/hibernate_generic"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HIBERNATE">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.jsf;#system#"/>

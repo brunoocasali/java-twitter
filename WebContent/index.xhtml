@@ -24,9 +24,19 @@
 		</div>
 		<div class="column row">
 			<div class="fourteen wide column">
-				<h:form>
-					<h:inputText value="#{tweetsBean.query}" placeholder="Busca!" />
-					<h:commandButton action="#{tweetsBean.search}" value="Buscar!" />
+				<h:form class="ui form">
+					<div class="fields">
+						<div class="fourteen wide field">
+							<div class="ui left labeled icon input">
+								<h:inputText value="#{tweetsBean.query}" placeholder="Busca!" />
+								<i class="search icon"></i>
+							</div>
+						</div>
+						<div class="wide field">
+							<h:commandButton action="#{tweetsBean.search}" value="Buscar!"
+								class="ui blue submit button" />
+						</div>
+					</div>
 				</h:form>
 			</div>
 		</div>

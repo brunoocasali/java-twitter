@@ -2,6 +2,8 @@ package br.edu.unisep.model.vo;
 
 // Import's try: CTRL + SHIF + O
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,6 +26,9 @@ public class TweetVO {
 
 	@Column(name = "text_tweet")
 	private String text;
+	
+	@Column(name = "created_at")
+	private Date createdAt;
 
 	@Column(name = "user_image")
 	private String image;
@@ -69,5 +74,13 @@ public class TweetVO {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date date) {
+		this.createdAt = date;
 	}
 }

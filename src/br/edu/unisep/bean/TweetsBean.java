@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import br.edu.unisep.hibernate.DAOGenerico;
+
 import br.edu.unisep.model.dao.TweetDAO;
 import br.edu.unisep.model.vo.TweetVO;
 
@@ -17,8 +17,8 @@ public class TweetsBean {
 	@PostConstruct
 	public void list() {
 		// Return only the data that lives in database
-		DAOGenerico<TweetVO> dao = new DAOGenerico<TweetVO>();
-		tweets = dao.listar(TweetVO.class);
+		TweetDAO dao = new TweetDAO();
+		tweets = dao.list(TweetVO.class);
 	}
 
 	public String search() {
@@ -29,7 +29,7 @@ public class TweetsBean {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "index";
+		return "index?faces-redirect=true";
 	}
 
 	// Acessor methods
