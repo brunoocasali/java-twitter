@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="connection.url">
+			jdbc:postgresql://localhost:5432/twitter_on_java
+		</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">07casali</property>
+		<property name="connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		<property name="dialect">
+			org.hibernate.dialect.PostgresPlusDialect
+		</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- Mapped Classes -->
+		<mapping class="br.edu.unisep.model.vo.TweetVO" />
+
+	</session-factory>
+
+</hibernate-configuration>
