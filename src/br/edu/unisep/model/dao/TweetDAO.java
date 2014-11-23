@@ -12,6 +12,7 @@ import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
 import br.edu.unisep.hibernate.GenericDAO;
 import br.edu.unisep.hibernate.HibernateSessionFactory;
 import br.edu.unisep.model.vo.TweetVO;
@@ -19,9 +20,24 @@ import br.edu.unisep.model.vo.TweetVO;
 @SuppressWarnings("unchecked")
 public class TweetDAO extends GenericDAO<TweetVO>{
 
+	private Twitter getInstance() {
+		
+		ConfigurationBuilder cb = new ConfigurationBuilder();
+		cb.setDebugEnabled(true)
+		.setOAuthConsumerKey("UzgNL6b36cCA9cxfUJTEngE5Z")
+		.setOAuthConsumerSecret("K5nLfI2jh3OU1TIZJLKUzGTBUxINjyOKlWDfh2scLO13XolmM9")
+		.setOAuthAccessToken("1961188398-keSF0EbhcwQiaL0UrMzoQta8pLbEdCtTZS0iWOG")
+		.setOAuthAccessTokenSecret("hvpcSh6lYJuPQfcW1XLEbC8kaLBWpkxbEGrsBpKkcqEJF");
+		TwitterFactory tf = new TwitterFactory(cb.build());
+		
+		return tf.getInstance();
+	}
+	
 	// Will be responsible to retrieve all of the data from Twitter!
 	public List<Status> getTweets(String q) throws Exception {
-		Twitter twitter = new TwitterFactory().getInstance();
+		
+		Twitter twitter = getInstance();
+		
 		try {
 			Query query = new Query(q);
 			query.setCount(20);
