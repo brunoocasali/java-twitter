@@ -5,7 +5,7 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="connection.url">
-			jdbc:postgres://bujrcvoexpwofd:kq6Uo7iw3opx2JaNcMZ5f_9ObK@ec2-184-73-229-220.compute-1.amazonaws.com:5432/dgmqn2ebhsi60
+			jdbc:postgres://ec2-184-73-229-220.compute-1.amazonaws.com:5432/dgmqn2ebhsi60
 		</property>
 		<property name="connection.username">bujrcvoexpwofd</property>
 		<property name="connection.password">kq6Uo7iw3opx2JaNcMZ5f_9ObK</property>
